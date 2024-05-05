@@ -15,11 +15,12 @@ from langchain.memory import ChatMessageHistory, ConversationBufferMemory
 import chainlit as cl
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv() 
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY=os.getenv("OPENAI_API_KEY")
 
-os.environ["OPENAI_API_KEY"] = "OPENAI_API_KEY"
+os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
 
